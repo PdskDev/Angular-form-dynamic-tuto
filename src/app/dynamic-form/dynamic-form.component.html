@@ -1,0 +1,8 @@
+<h1>Dynamic form</h1>
+<form [formGroup]="dynamicForm">
+  <div *ngFor="let control of formStructure">
+    <label>{{control.label}}</label>
+    <input [type]="control.type" [formControlName]="control.name">
+  </div>
+  <button type="submit">Submit</button>
+</form>
