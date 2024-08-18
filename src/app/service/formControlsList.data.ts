@@ -4,6 +4,7 @@ export const formDataStructureList = [
     label: 'Name',
     name: 'name',
     value: '',
+    visible: true,
     validations: [
       {
         name: 'required',
@@ -17,6 +18,7 @@ export const formDataStructureList = [
     label: 'Email',
     name: 'email',
     value: '',
+    visible: true,
     validations: [
       {
         name: 'required',
@@ -35,6 +37,8 @@ export const formDataStructureList = [
     label: 'Password',
     name: 'password',
     value: '',
+    visible: (form: { email: string | any[] }) =>
+      form.email && form.email.length > 3,
     validations: [
       {
         name: 'required',

@@ -5,5 +5,6 @@ export interface IFormControl {
   label: string;
   name: string;
   value: string;
+  visible: any;
   validations: IFormValidation[];
 }
